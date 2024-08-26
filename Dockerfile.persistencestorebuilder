@@ -1,0 +1,30 @@
+FROM python:3.12-bookworm
+
+ENV PYTHONPATH="$$PYTHONPATH:/app:/app/tools"
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+RUN mkdir -p /app/tools && mkdir /data
+
+COPY ./src/tools/config.py /app/tools/
+COPY ./src/tools/persistence_store_builder.py /app/tools/
+COPY ./src/tools/vector_db_tool.py /app/tools/
+COPY ./src/tools/db_tools.py /app/tools/
+COPY ./src/tools/meetings_tools.py /app/tools/
+COPY ./src/tools/summarization_tools.py /app/tools/
+COPY ./src/consts.py /app/
+COPY ./.env.docker.dev /.env.dev
+COPY ./persistencestorebuilder_requirements.txt /app/requirements.txt
+COPY ./data/meetings.json /data/
+
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    software-properties-common \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install -r requirements.txt
+
+ENTRYPOINT ["python", "tools/persistence_store_builder.py"]

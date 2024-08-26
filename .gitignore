@@ -1,0 +1,7 @@
+.coverage
+.env.*
+.idea/
+.vscode/
+output/
+__pycache__/
+ml_models/

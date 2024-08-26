@@ -1,0 +1,18 @@
+FROM python:3.12-bookworm
+
+ENV PYTHONPATH="$$PYTHONPATH:/code:/code/tools"
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /code
+
+COPY ./api_requirements.txt /code/requirements.txt
+
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+RUN mkdir /output
+
+COPY ./src/backend /code/app
+COPY ./src/tools /code/tools
+COPY ./src/consts.py /code/
+COPY ./.env.docker.dev /.env.dev
+
+CMD ["fastapi", "run", "app/api.py", "--port", "80"]

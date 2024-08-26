@@ -1,0 +1,10 @@
+fastapi==0.111.1
+fastapi-cli==0.0.4
+ctransformers==0.2.27
+mysql-connector-python==9.0.0
+pymilvus==2.4.4
+transformers==4.42.4
+torch==2.3.1
+instructor==1.3.7
+pydantic==2.8.2
+pydantic_core==2.20.1
