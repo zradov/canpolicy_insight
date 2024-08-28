@@ -1,5 +1,4 @@
-![Tests code coverage](./tests/coverage.svg)
-<img src="./tests/coverage.svg">
+![Tests code coverage](https://raw.githubusercontent.com/ranzer/canpolicy_insight/main/src/tests/coverage.svg)
 
 ## 1. The project
 
