@@ -220,7 +220,7 @@ class PromptTool(ABC):
             query_result = results[single_query_plan.id]
             query_type_name = single_query_plan.query_type.lower()
             for index, col in enumerate(single_query_plan.parameters["columns"]):
-                formatted_query_results.append(f"{query_type_name} {col}: "
+                formatted_query_results.append(f"{query_type_name} {col}s: "
                                                f"{",".join([str(v[index]) for v in query_result])}")
         return "\n".join(formatted_query_results)
 
