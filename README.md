@@ -10,44 +10,44 @@ creating simplified summaries and insights based on user queries.
 ├── README.md                       
 ├── api_requirements.txt            
 ├── storage                         
-├── data             
-│   ├── data.sql                 
-│   ├── meetings.json                      
-│   └── vector_embeddings.json                             
+├── data                                                                                           
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── data.sql                 
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── meetings.json                      
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── vector_embeddings.json                             
 ├── docker-compose.yml    
 ├── Dockerfile.api     
 ├── Dockerfile.frontend  
 ├── Dockerfile.datascraper   
-├── Dockerfile.persistencestorebuilder
-├── data_scrapper_requirements.txt
-├── persistencestorebuilder_requirements.txt
+├── Dockerfile.persistencestorebuilder                                                                                               
+├── data_scrapper_requirements.txt                                                                                                                       
+├── persistencestorebuilder_requirements.txt                                                                                                                         
 ├── frontend_requirements.txt    
 ├── ml_models    
 ├── output    
 ├── requirements.txt   
 └── src   
     ├── backend  
-    │   ├── api.py                  
-    │   └── main.py                 
+    │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── api.py                  
+    │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── main.py                 
     ├── frontend                    
-    │   └── main.py                 
+    │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── main.py                 
     ├── consts.py   
     ├── meetings_data_scraper.py  
     ├── ml   
-    │   ├── bert_meetings_summarization.py  
-    │   ├── evaluate_summarization_models.py  
-    │   ├── langchain_mistral_meetings_summarization.py  
-    │   ├── mistral_meeting_summarization.py  
-    │   └── transformers_meeting_summarization.py  
+    │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── bert_meetings_summarization.py  
+    │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── evaluate_summarization_models.py  
+    │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── langchain_mistral_meetings_summarization.py  
+    │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── mistral_meeting_summarization.py  
+    │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── transformers_meeting_summarization.py  
     ├── test.py   
-    └── tools   
-        ├── db_tools.py   
-        ├── meetings_tools.py   
-        ├── persistence_store_builder.py  
-        ├── prompt_tool.py  
-        ├── prompt_tool_using_llmware.py  
-        ├── summarization_tools.py  
-        └── vector_db_tool.py  
+    └── tools                                                                                                               
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── db_tools.py   
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── meetings_tools.py   
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── persistence_store_builder.py  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── prompt_tool.py  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── prompt_tool_using_llmware.py  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── summarization_tools.py  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── vector_db_tool.py  
 
 ## 3. Files and folders description 
 
